@@ -1,0 +1,310 @@
+/* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Cabecera */
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img:first-child{
+    max-width: 100px;
+}
+
+header img:last-child{
+    max-height: 50px;
+}
+
+/* Seccion banner */
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+/* Seccion rebajas */
+.rebajas{
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-size: 2.7rem;
+}
+
+h1 span:first-child{
+    font-weight: bold;
+}
+
+h1 span:last-child{
+    font-size: 1rem;
+}
+
+/* Seccion rebajas */
+.rebajas h2{
+    font-size: 2rem;
+    text-shadow: 0px 0px 20px #fff;
+}
+
+.rebajas p{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.rebajas span{
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    color: gold;
+}
+
+/* Seccion productos */
+.productos{
+    padding: 20px;
+}
+
+.productos h2{
+    text-transform: uppercase;
+    width: fit-content;
+    margin: 20px auto 50px auto;
+    font-family: 'Roboto', serif;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.contenedorProductos article{
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+.productos .contenedorProductos article:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.productos article .producto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.productos article .producto h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.productos article .producto p.descripcion{
+    text-align: center;
+}
+
+.productos article .producto .precioAnterior{
+    text-decoration: line-through;
+    margin-bottom: 0;
+}
+
+.productos article .producto .precioNuevo{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.productos article .producto .btn{
+    width: fit-content;
+    border-color: #504CA5;
+    background-color: #504CA5;
+}
+
+.productos article img{
+    width: 60%;
+    max-width: 250px;
+}
+
+.productos .enlacePagina{
+    width: fit-content;
+    margin: 50px auto 50px auto;
+    
+}
+
+.productos .enlacePagina a{
+    font-size: 1.5rem;
+}
+
+/* Seccion servicios */
+.servicios{
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.servicios .contenedorServicios{
+    width: 50%;
+}
+
+.servicios .contenedorServicios .servicio{
+    display: flex;
+    gap: 15px;
+}
+
+.servicios i.bi{
+    color: #504CA5;
+    font-size: 1.4rem;
+}
+
+.servicios p{
+    font-size: 1.1rem;
+}
+
+.servicios span{
+    font-weight: bold;
+}
+
+/* Seccion Triunfar */
+.triunfar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+}
+
+.triunfar img{
+    max-width: 90px;
+}
+
+.triunfar .texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.triunfar p{
+    width: fit-content;
+    margin: 0;
+}
+
+.triunfar span{
+    font-family: 'Roboto', serif;
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+/* Footer */
+footer{
+    margin: 50px auto 10px auto;
+    width: 70%;
+}
+
+footer .contenedorContacto{
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: #51A8DF;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+footer .contacto span{
+    margin-left: 5px;
+}
+
+footer .contacto a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .politicas{
+    display: flex;
+    justify-content: center;
+}
+
+footer .politicas a{
+    font-size: .8rem;
+    margin: auto 5px auto 5px;
+}
+
+/* Media Queries */
+@media (max-width: 580px){
+    main, footer{
+        width: 100%;
+    }
+    .productos h2{
+        font-size: 1.6rem;
+    }
+    .productos .contenedorProductos article img{
+        max-width: 180px;
+        max-height: 180px;
+    }
+    .productos .contenedorProductos article .producto h3{
+        font-size: 1.3rem;
+    }
+    .productos .contenedorProductos article .descripcion{
+        display: none;
+    }
+    .servicios{
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 0 auto 40px auto;
+    }
+    .servicios .contenedorServicios{
+        width: 100%;
+    }
+}
+@media (max-width: 700px){
+    footer .contenedorContacto{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (min-width: 1280px){
+    main, footer{
+        max-width: 60%;
+    }
+    .productos .contenedorProductos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .productos .contenedorProductos article{
+        max-width: 49%;
+    }
+    .productos .contenedorProductos article:nth-child(even){
+        flex-direction: row;
+    }
+}
