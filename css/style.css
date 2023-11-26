@@ -89,27 +89,33 @@ h1 span:last-child{
     padding: 20px;
 }
 
+.productos .contenedorProductos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .productos h2{
     text-transform: uppercase;
     width: fit-content;
     margin: 20px auto 50px auto;
     font-family: 'Roboto', serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-decoration: underline;
+    text-align: center;
 }
 
 .contenedorProductos article{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 70px;
+    gap: 10px;
     border: 1px solid #000;
     border-radius: 15px;
     padding: 15px;
     overflow: hidden;
-}
-
-.productos .contenedorProductos article:nth-child(even){
-    flex-direction: row-reverse;
+    width: 350px;
 }
 
 .productos article .producto{
@@ -272,10 +278,7 @@ footer .politicas a{
         max-height: 180px;
     }
     .productos .contenedorProductos article .producto h3{
-        font-size: 1.1rem;
-    }
-    .productos .contenedorProductos article .descripcion{
-        display: none;
+        font-size: 1.3rem;
     }
     .servicios{
         flex-wrap: wrap;
@@ -299,12 +302,6 @@ footer .politicas a{
     .productos .contenedorProductos{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .productos .contenedorProductos article{
-        max-width: 49%;
-    }
-    .productos .contenedorProductos article:nth-child(even){
-        flex-direction: row;
+        justify-content: center;
     }
 }
